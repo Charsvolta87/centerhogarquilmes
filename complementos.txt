@@ -1,0 +1,8 @@
+Para agregar mas parametros de filtro en las busqueda de la barra:
+
+const productosFiltrados = productos.filter(producto => 
+    producto.nombre.toLowerCase().includes(query.toLowerCase()) ||
+    producto.descripcion.toLowerCase().includes(query.toLowerCase()) ||
+    producto.categoria.toLowerCase().includes(query.toLowerCase()) ||
+    producto.caracteristicas.some(c => c.toLowerCase().includes(query.toLowerCase()))
+);
